@@ -42,8 +42,12 @@ public class BMI_kalkulacka {
         }
 
         hmotnost = 137.8;
-        vyska = 1.68;
-        BMI = hmotnost / (vyska * vyska);
+        vyska = -1.68;
+        if (hmotnost <= 0 || vyska <=0) {
+            System.out.println("Jedna hodnota je nesprávne zadaná.");
+            return;
+        }
+            BMI = hmotnost / (vyska * vyska);
         if (BMI > 40.0)  {
             System.out.println("Vaše BMI je " + BMI + ": OBEZITA 3. STUPNA");
         }
